@@ -1,4 +1,3 @@
-````markdown name=README.md
 # HTML Projects & Learnings Repository
 
 Welcome to my HTML repository! 👋
@@ -43,4 +42,3 @@ This repository is for educational purposes. If you wish to use any code, please
 
 Happy Coding!  
 Wahidur Rahman
-````
