@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Invite</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F0EBF8; 
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* Main container to center the form */
+        .form-container {
+            max-width: 650px;
+            width: 100%;
+        }
+
+        /* Shared styles for all form "cards" */
+        .form-card {
+            background-color: #ffffff;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            margin-top: 12px;
+            padding: 24px;
+        }
+
+        /* Header card with the title and description */
+        .header-card {
+            border-top: 10px solid #673AB7; 
+        }
+
+        .header-card h1 {
+            font-size: 32px;
+            font-weight: 500;
+            margin: 0 0 8px 0;
+            line-height: 1.25;
+        }
+
+        .header-card p {
+            font-size: 14px;
+            margin: 0;
+            color: #5f6368;
+        }
+
+        /* Question card styles */
+        .question-card {
+            border-left: 3px solid transparent;
+            
+        }
+
+        /* Style when a user interacts with an element inside the card */
+        .question-card:focus-within {
+            border-left-color: #673AB7;
+        }
+        
+        /* Label styles for questions */
+        .question-card > label { 
+            font-size: 16px;
+            color: #202124;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        /* Sub-description text for questions */
+        .question-subtext {
+            font-size: 13px;
+            color: #5f6368;
+            margin: -16px 0 16px 0;
+        }
+        
+
+        /* Text input field styles */
+        input[type="text"], input[type="number"], input[type="email"] {
+            border: none;
+            border-bottom: 1px solid #bdbdbd;
+            width: 50%;
+            padding: 8px 0;
+            font-size: 14px;
+            font-family: 'Roboto', sans-serif;
+            outline: none;
+            transition: border-bottom 0.2s ease-in-out;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus {
+            border-bottom: 2px solid #673AB7; 
+        }
+        
+        /* Radio button and Checkbox option container */
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .radio-option label, .checkbox-option label {
+            margin: 0 0 0 12px; 
+            font-weight: 400;
+            color: #3c4043;
+            font-size: 14px;
+        }
+
+        input[type="radio"] {
+            width: 20px;
+            height: 20px;
+        }
+        
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Submit button styles */
+        .submit-btn {
+            background-color: #673AB7;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #5e35b1; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <img style="width: 100%; border: 1px solid #dadce0; border-radius: 8px; display: block;" src="PIC.jpeg" alt="Party balloons banner">
+        
+        <form action="#" method="get">
+            <div class="form-card header-card">
+                <h1>Party Invite</h1>
+                <p>Hi I am Wahidur Rahman, I am invinting you to my party, so please join me.</p>
+            </div>
+
+            <div class="form-card question-card">
+                <label for="name">What is your name?</label>
+                <input type="text" id="name" name="name" placeholder="Type your name here." required>
+            </div>
+
+            <div class="form-card question-card">
+                <label>Can you attend?<span class="required">*</span></label>
+                <div class="radio-option">
+                    <input type="radio" id="yes" name="attendance" value="yes" required>
+                    <label for="yes">Yes, I'll be there</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="no" name="attendance" value="no" required>
+                    <label for="no">Sorry, can't make it</label>
+                </div>
+            </div>
+
+            <div class="form-card question-card">
+                <label for="attendee_count">How many of you are attending?</label>
+                <input type="number" id="attendee_count" name="attendee_count" placeholder="Number" min="1">
+            </div>
+
+            <div class="form-card question-card">
+                <label>What will you be bringing?</label>
+                <p class="question-subtext">Let us know what kind of dish(es) you'll be bringing</p>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="mains" name="bringing" value="mains">
+                    <label for="mains">Mains</label>
+                </div>
+                 <div class="checkbox-option">
+                    <input type="checkbox" id="salad" name="bringing" value="salad">
+                    <label for="salad">Salad</label>
+                </div>
+                 <div class="checkbox-option">
+                    <input type="checkbox" id="dessert" name="bringing" value="dessert">
+                    <label for="dessert">Dessert</label>
+                </div>
+                 <div class="checkbox-option">
+                    <input type="checkbox" id="drinks" name="bringing" value="drinks">
+                    <label for="drinks">Drinks</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="sides" name="bringing" value="sides">
+                    <label for="sides">Sides/Appetizers</label>
+                </div>
+                <div class="checkbox-option">
+                    <input type="checkbox" id="other" name="bringing" value="other">
+                    <label for="other">Other...</label>
+                </div>
+            </div>
+
+            <div class="form-card question-card">
+                <label for="allergies">Do you have any allergies or dietary restrictions?</label>
+                <input type="text" id="allergies" name="allergies" placeholder="Give the information.">
+            </div>
+
+            <div class="form-card question-card">
+                <label for="email">What is your email address?</label>
+                <input type="email" id="email" name="email" placeholder="Short-answer text">
+            </div>
+
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+    </div>
+
+</body>
+</html>
